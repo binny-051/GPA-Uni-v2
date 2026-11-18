@@ -1422,6 +1422,7 @@ function veBieuDoTichLuy(danhSachMoc, gpaTichLuyChung) {
     }
 
     var theChenhLech = lay("chenh-lech-gpa-tich-luy");
+    var theTinChiTichLuy = lay("tin-chi-gpa-tich-luy");
     var theGoiY = lay("goi-y-tuong-tac-bieu-do");
 
     if (moc.length === 0) {
@@ -1435,6 +1436,9 @@ function veBieuDoTichLuy(danhSachMoc, gpaTichLuyChung) {
         if (theChenhLech) {
             theChenhLech.className = "nhan-chenh-lech";
             theChenhLech.innerText = "Chưa có mốc học kỳ trên biểu đồ";
+        }
+         if (theTinChiTichLuy) {
+            theTinChiTichLuy.innerText = "Tín chỉ đang tính trong GPA: 0 TC";
         }
         dongBoTichLuySangMucTieu(null);
 
@@ -1554,6 +1558,12 @@ function veBieuDoTichLuy(danhSachMoc, gpaTichLuyChung) {
     if (theChenhLech) {
         theChenhLech.className = "nhan-chenh-lech";
         theChenhLech.innerText = "Tính trên " + moc.length + " học kỳ · Xếp loại: " + xepLoai(gpaXepLoaiHe4);
+    }
+     if (theTinChiTichLuy) {
+        var tongTcHienThi = (ketQuaTb && typeof ketQuaTb.tongTinChi === "number" && ketQuaTb.tongTinChi > 0)
+            ? Math.round(ketQuaTb.tongTinChi * 100) / 100
+            : 0;
+        theTinChiTichLuy.innerText = "Tín chỉ đang tính trong GPA: " + String(tongTcHienThi).replace(".", ",") + " TC";
     }
 
     dongBoTichLuySangMucTieu(tinhTrungBinhMocBieuDo(danhSachMoc));
