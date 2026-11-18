@@ -5526,6 +5526,10 @@ body.che-do-toi .ghi-chu-trang-thai {
 
 .khung-huy-hieu-tich-luy {
     margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 .the-kpi-tich-luy .nhan-chenh-lech {
@@ -5537,6 +5541,18 @@ body.che-do-toi .ghi-chu-trang-thai {
     background-color: #eef2ff;
     color: #4f46e5;
     border: 1px solid rgba(79, 70, 229, 0.15);
+}
+
+.the-kpi-tich-luy .nhan-tin-chi-tich-luy {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 600;
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    font-variant-numeric: tabular-nums;
 }
 
 .chan-kpi-tich-luy {
@@ -5789,6 +5805,10 @@ body.che-do-toi .ghi-chu-trang-thai {
         white-space: nowrap;
         padding: 6px 16px;
     }
+    .the-kpi-tich-luy .nhan-tin-chi-tich-luy {
+        white-space: nowrap;
+        padding: 5px 14px;
+    }
     .the-kpi-tich-luy .chan-kpi-tich-luy {
         border-top: none;
         padding-top: 0;
@@ -5861,6 +5881,12 @@ body.che-do-toi .the-kpi-tich-luy #so-gpa-tich-luy-lon {
 
 body.che-do-toi .the-kpi-tich-luy .tren-bon {
     color: #94a3b8;
+}
+
+body.che-do-toi .the-kpi-tich-luy .nhan-tin-chi-tich-luy {
+    background-color: rgba(30, 41, 59, 0.75);
+    color: #cbd5e1;
+    border-color: #334155;
 }
 
 body.che-do-toi .the-kpi-tich-luy .nhan-gpa-tich-luy {
